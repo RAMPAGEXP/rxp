@@ -17,8 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 'RAMPAGEXP/cw-unity-prop'
-          ref: 'v0.3.2'
+          repository: 'RAMPAGEXP/cw-monolith-prop'
+          ref: 'v0.0.1-alpha'
       - name: Test smart contract gov prop
         run: |
           chmod a+x ./scripts/submit_gov_ci.sh

@@ -9,22 +9,22 @@ import (
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 )
 
-// UnityContractAddress is the address of the Unity contract
-const UnityContractAddress = "rxp1nz96hjc926e6a74gyvkwvtt0qhu22wx049c6ph6f4q8kp3ffm9xq5938mr"
+// MonolithContractAddress is the address of the Monolith contract
+const MonolithContractAddress = "rxp1nz96hjc926e6a74gyvkwvtt0qhu22wx049c6ph6f4q8kp3ffm9xq5938mr"
 
-// UnityContractPlaceHolderAddress is the address where the funds were sent in prop 20
-const UnityContractPlaceHolderAddress = "rxp1t0heu5cca4n3dgg308rskpn9d60mj8fyrgw9jne5fve9mygsm9xqkcrpl2"
+// MonolithContractPlaceHolderAddress is the address where the funds were sent in prop 20
+const MonolithContractPlaceHolderAddress = "rxp1t0heu5cca4n3dgg308rskpn9d60mj8fyrgw9jne5fve9mygsm9xqkcrpl2"
 
 // CreateUpgradeHandler make upgrade handler
 func CreateUpgradeHandler(mm *module.Manager, configurator module.Configurator, staking *stakingkeeper.Keeper, bank *bankkeeper.BaseKeeper) upgradetypes.UpgradeHandler {
 	return func(ctx sdk.Context, plan upgradetypes.Plan, vm module.VersionMap) (module.VersionMap, error) {
 		bondDenom := staking.BondDenom(ctx)
 
-		accAddr, _ := sdk.AccAddressFromBech32(UnityContractPlaceHolderAddress)
+		accAddr, _ := sdk.AccAddressFromBech32(MonolithContractPlaceHolderAddress)
 		accCoin := bank.GetBalance(ctx, accAddr, bondDenom)
 
-		// get Unity Contract Address and send coin to this address
-		destAcc, _ := sdk.AccAddressFromBech32(UnityContractAddress)
+		// get Monolith Contract Address and send coin to this address
+		destAcc, _ := sdk.AccAddressFromBech32(MonolithContractAddress)
 		err := bank.SendCoins(ctx, accAddr, destAcc, sdk.NewCoins(accCoin))
 		if err != nil {
 			panic(err)
