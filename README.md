@@ -1,7 +1,5 @@
-# Junø
+# RXP
 
-
-![c11](https://user-images.githubusercontent.com/79812965/131373443-5ff0d9f6-2e2a-41bd-8347-22ac4983e625.jpg)
 
 ❗️For issue disclosure, check out [SECURITY.md](./SECURITY.md) ❗️
 
@@ -69,17 +67,6 @@ and to provide utility in the deployment and execution of smart contracts.
 ⚪️ Grass roots community
 
 ⚪️ Decentralized
-
-
-
-
-
-![c22](https://user-images.githubusercontent.com/79812965/131373499-81549b6c-6ab6-49fa-9d2f-4f7b79f74509.jpg)
-
-
-
-
-
 
 **Tokenomics & reward shedule** (updated on 24.07.2021)
 
